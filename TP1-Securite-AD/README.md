@@ -212,4 +212,4 @@ Ce TP m'a permis d'apprendre des techniques d'attaque réelles sur Active Direct
 
 ---
 
-*Document réalisé dans le cadre de la préparation à la certification eJPT — corrigé du TP "Sécurité de l'Active Directory - TP 1".*
+*Document réalisé dans le cadre de la préparation à la certification eJPT / corrigé du TP "Sécurité de l'Active Directory - TP 1".*
