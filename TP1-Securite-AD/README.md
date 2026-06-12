@@ -38,6 +38,9 @@
 - Utilisateurs trouvés (users.txt) : extraction de tous les `sAMAccountName` des objets `user` du domaine avec `go-windapsearch --dc-ip 192.168.222.135 -m users` (ou ldapsearch + grep/awk), liste enregistrée dans `users.txt` pour préparer les attaques de password spraying / AS-REP Roasting.
 - Mots de passe trouvés dans les descriptions (passwords.txt) : en parcourant l'attribut `description` de chaque compte, certains comptes contiennent un mot de passe en clair laissé par erreur par l'administrateur (mauvaise pratique courante en AD). Ces valeurs sont extraites et regroupées dans `passwords.txt` pour servir de dictionnaire de mots de passe lors du password spraying.
 
+📸 *Screenshot à ajouter : extraction users.txt*
+📸 *Screenshot à ajouter : descriptions contenant des mots de passe*
+
 ### Observation de la commande ldapsearch
 
 > Voici les arguments de la commande :
@@ -198,6 +201,14 @@ Identifiants valides identifiés :
 <img width="868" height="615" alt="image" src="https://github.com/user-attachments/assets/507a1741-ab55-4bb2-8331-51dd9c7e2f91" />
 
 > Après l'obtention des privilèges administrateur, une exécution distante a été réalisée sur le contrôleur de domaine à l'aide de impacket-psexec. La commande impacket-secretsdump a ensuite permis d'effectuer une attaque DCSync, entraînant l'extraction des hashs des comptes du domaine depuis la base NTDS. Cette étape confirme la compromission complète de l'Active Directory, un attaquant pouvant désormais usurper n'importe quel compte du domaine.
+
+## Conclusion
+
+Ce TP m'a permis de comprendre concrètement comment un Active Directory peut être compromis à partir de failles simples mais mal corrigées. En partant uniquement d'une phase de reconnaissance réseau et LDAP, j'ai pu exploiter des mots de passe faibles, des comptes mal configurés et des permissions excessives pour progresser étape par étape dans le domaine.
+
+Les attaques comme le password spraying, l'AS-REP roasting, le kerberoasting et l'analyse avec BloodHound m'ont montré comment un attaquant peut enchaîner plusieurs faiblesses pour atteindre des privilèges élevés. L'attaque DCSync illustre bien qu'une fois certains droits obtenus, l'ensemble du domaine peut être compromis.
+
+Ce TP m'a permis d'apprendre des techniques d'attaque réelles sur Active Directory et de mieux comprendre leur impact. Ces connaissances pourront me servir à la fois pour identifier des failles dans un environnement professionnel et pour mettre en place des mesures de sécurité adaptées afin d'éviter ce type de compromission.
 
 ---
 
