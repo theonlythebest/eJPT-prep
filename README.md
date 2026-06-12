@@ -1,2 +1,1 @@
-# eJPT-prep
-Notes et write-ups (sujets + corriges) realises en reparation de la certification eJPT.
+## Notes et write-ups (sujets + corrigés) réalisés en préparation de la certification eJPT.
