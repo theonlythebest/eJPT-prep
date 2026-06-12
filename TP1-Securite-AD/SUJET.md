@@ -276,4 +276,4 @@ impacket-secretsdump '<DOMAIN>/<COMPTE>@<DC_IP>:<PASSWORD>'
 
 ---
 
-*Document réalisé dans le cadre de la préparation à la certification eJPT — basé sur le TP "Sécurité de l'Active Directory - TP 1".*
+*Document réalisé dans le cadre de la préparation à la certification eJPT / basé sur le TP "Sécurité de l'Active Directory - TP 1".*
