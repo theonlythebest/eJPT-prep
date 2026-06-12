@@ -281,4 +281,4 @@
 
 ---
 
-*Document réalisé dans le cadre de la préparation à la certification eJPT — corrigé du TP "Sécurité de l'Active Directory - TP 2".*
+*Document réalisé dans le cadre de la préparation à la certification eJPT / corrigé du TP "Sécurité de l'Active Directory - TP 2".*
