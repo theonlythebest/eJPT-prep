@@ -38,9 +38,6 @@
 - Utilisateurs trouvés (users.txt) : extraction de tous les `sAMAccountName` des objets `user` du domaine avec `go-windapsearch --dc-ip 192.168.222.135 -m users` (ou ldapsearch + grep/awk), liste enregistrée dans `users.txt` pour préparer les attaques de password spraying / AS-REP Roasting.
 - Mots de passe trouvés dans les descriptions (passwords.txt) : en parcourant l'attribut `description` de chaque compte, certains comptes contiennent un mot de passe en clair laissé par erreur par l'administrateur (mauvaise pratique courante en AD). Ces valeurs sont extraites et regroupées dans `passwords.txt` pour servir de dictionnaire de mots de passe lors du password spraying.
 
-📸 *Screenshot à ajouter : extraction users.txt*
-📸 *Screenshot à ajouter : descriptions contenant des mots de passe*
-
 ### Observation de la commande ldapsearch
 
 > Voici les arguments de la commande :
